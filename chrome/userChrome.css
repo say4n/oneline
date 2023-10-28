@@ -41,6 +41,10 @@
 	display: none !important;
 }
 
+#pageAction-urlbar-_testpilot-containers {
+	display: none !important;
+}
+
 .titlebar-button>.toolbarbutton-icon {
 	visibility: hidden;
 }
