@@ -11,10 +11,16 @@
 
 tab-item {
 	overflow: hidden;
+	--tab-size: 3.5rem !important;
 }
 
 tab-item tab-item-substance {
-	padding: 6px !important;
+	padding: 16px !important;
+	height: var(--tab-size);
+}
+
+tab-item + tab-item {
+	border-top: thin solid #ccc;
 }
 
 tab-item .background {
@@ -26,7 +32,7 @@ tab-item .background {
 
 tab-item tab-favicon {
 	order: 10 !important;
-	margin-left: 18px;
+	margin-left: 16px;
 	margin-right: 16px;
 	transition: var(--transition-duration) var(--transition-ease);
 }
@@ -37,15 +43,14 @@ tab-item tab-closebox {
 	margin-right: -32px;
 }
 
-tab-item:hover tab-closebox {
-	margin-right: 0px;
+tab-item.active tab-item-substance {
+	background-color: #ccc;
 }
 
 #tabbar {
-	padding: 10px;
-	background-color: rgb(249, 249, 251);
+	background-color: var(--theme-colors-frame);
 	scrollbar-color: #ffffff20 transparent;
-	border-right: 1px solid #ccc;
+	border-right: thin solid #ccc;
 }
 
 .newtab-button {
@@ -64,7 +69,7 @@ tab-item:hover tab-closebox {
 }
 
 #tabbar-container>.after-tabs .newtab-button-box {
-	padding: 0 10px 10px 10px;
+	padding: 0 10px 10px 0;
 }
 
 .newtab-action-selector-anchor {
