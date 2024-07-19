@@ -6,7 +6,7 @@
 	--wc-yellow: hsl(50, 90%, 60%);
 	--wc-green: hsl(160, 90%, 40%);
 	--sidebar-collapsed-width: var(--navbar-height);
-	--sidebar-width: 250px;
+	--sidebar-width: 200px;
 	--transition-duration: 0.2s;
 	--transition-ease: ease-out;
 }
@@ -92,8 +92,8 @@
 #sidebar-box {
 	z-index: 100 !important;
 	position: relative !important;
-	min-width: var(--sidebar-collapsed-width) !important;
-	max-width: var(--sidebar-collapsed-width) !important;
+	min-width: var(--sidebar-width) !important;
+	max-width: var(--sidebar-width) !important;
 }
 
 /* inner width = expanded width & move inner to only show initial-width long section */
@@ -101,8 +101,9 @@
 	min-width: var(--sidebar-width) !important;
 	max-width: var(--sidebar-width) !important;
 	width: var(--sidebar-width) !important;
-	transform: translateX(calc(var(--sidebar-collapsed-width) - var(--sidebar-width)));
-	transition: var(--transition-duration) var(--transition-ease);
+	/* Always keep sidebar expanded. */
+	/* transform: translateX(calc(var(--sidebar-collapsed-width) - var(--sidebar-width))); */
+	/* transition: var(--transition-duration) var(--transition-ease); */
 }
 
 #sidebar-box #sidebar:hover {
